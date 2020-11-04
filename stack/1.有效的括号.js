@@ -58,4 +58,5 @@ var isValid = function(s){
 
 var str = '()[]{}'
 console.log(isValid(str))
+//时间复杂度O(n)   空间复杂度O(n)
 
