@@ -64,3 +64,24 @@ javascript 中没有栈，但是可以用Array实现栈的所有功能
 
 #### 2 JS中的函数调用堆栈
 参考 /stack/2.callStack.js
+
+## 队列
+队列是一个先进先出的数据结构(push,pop)  
+javascript 中没有栈，但是可以用Array实现栈的所有功能  
+
+#### 1 队列的应用场景
++ 需要先进先出的场景  
++ 食堂排队打饭,js异步中的任务队列,计算最近请求次数  
+
+#### 2 JS中的异步队列
+```
+setTimeout(()=>console.log(1),0)
+console.log(2)
+
+执行流程：setTimeout丢给webApis处理
+         主事件执行console.log(2)
+         webapi将setTimeout结果丢入 Callback Queue(队列)
+         主事件执行完后，顺序执行队列中的console.log(2)
+
+```
+
