@@ -85,3 +85,29 @@ console.log(2)
 
 ```
 
+
+## 链表
++ 多个元素组成的列表  
++ 元素存储不连续，用next指针连在一起  
++ javaScript中没有链表，但是可以用Object模拟链表。
+
+#### 数组和链表的区别
++ 数组：增删非首尾元素时，往往需要移动元素。  
++ 链表：增删非首尾元素，不需要移动元素，只需要更改next的指向即可  
+
+## 原型链
+原型链的本质是链表  
+原型链上的节点是各种原型对象，比如 Function.prototype,Object.prototype....  
+原型链通过__proto__属性链接各种原型对象  
+
+#### 原型链形式
+`obj--__proto__-->Object.prototype--__proto__-->null`
+`func--__proto__-->Function.prototype--__proto__-->Object.prototype--__proto__-->null`  
+`arr--__proto__-->Array.prototype--__proto__-->Object.prototype--__proto__-->null`  
+
+#### 原型链知识点  
++ 如果A沿着原型链能找到B.prototype,那么A instanceof B 为 true  
++ 如果在A对象上没有找到x属性，那么就会沿着原型链找x属性
+
+
+
